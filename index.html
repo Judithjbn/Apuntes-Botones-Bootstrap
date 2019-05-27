@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=0.5, user-scalable=yes, shrink-to-fit=no" />
+		
+		<meta name="description" content="" /> <!-- 170 letras máximo -->
+		<meta name="keywords" content="" /> <!-- No se usa -->
+		
+		<link rel="stylesheet" href="styles/bootstrap.min.css"/>
+		
+		<link href="styles/styles.css" rel="stylesheet" />
+        
+              <!--zona de carga de bibliotecas-->
+        <script src="scripts/utilidades.js"></script>
+        <script src="scripts/scripts.js"></script>
+          
+	</head>
+	<body>
+		<h1>Componentes Responsive Bootstrap</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>BOTONES</h2>
+
+                    <button type="button" class="btn btn-primary" onclick="saltar();">Primary</button>
+
+                    <input class="btn btn-primary" type="button" value="Input" />
+
+                    <a class="btn btn-primary" href="pagina2.html" role="button">Link</a> <!-- Aconsejable para botones que enlazan páginas -->
+
+                    <a class="btn btn-danger" href="http://www.google.es" role="button" onclick="trampa();">Ir a Google</a>
+                    
+                    <br/>
+                    <br/>
+
+                       <div class="dropdown">
+                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Dropdown button
+                           </button>
+                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                               <h6 class="dropdown-header">Subdivisión</h6>
+                               <a class="dropdown-item" href="#">Action</a>
+                               <a class="dropdown-item" href="#">Another action</a>
+                               <div class="dropdown-divider"></div> <!--Linea separadora menú -->
+                               <h6 class="dropdown-header">Subdivisión 2</h6>
+                               <a class="dropdown-item" href="#">Something else here</a>
+                           </div>
+</div>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+
+		<!--scripts de javascript de bootstrap -->
+		<script src="scripts/jquery-3.3.1.slim.min.js"></script>
+		<script src="scripts/popper.min.js"></script>
+		<script src="scripts/bootstrap.min.js"></script>
+
+	</body>
+</html>
+
