@@ -3,20 +3,23 @@
 	<head>
 		<title></title>
 		<meta charset="utf-8" />
-		
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=0.5, user-scalable=yes, shrink-to-fit=no" />
-		
+
 		<meta name="description" content="" /> <!-- 170 letras máximo -->
 		<meta name="keywords" content="" /> <!-- No se usa -->
-		
+
 		<link rel="stylesheet" href="styles/bootstrap.min.css"/>
-		
+
 		<link href="styles/styles.css" rel="stylesheet" />
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
               <!--zona de carga de bibliotecas-->
         <script src="scripts/utilidades.js"></script>
         <script src="scripts/scripts.js"></script>
-          
+
 	</head>
 	<body>
 		<h1>Componentes Responsive Bootstrap</h1>
@@ -32,7 +35,7 @@
                     <a class="btn btn-primary" href="pagina2.html" role="button">Link</a> <!-- Aconsejable para botones que enlazan páginas -->
 
                     <a class="btn btn-danger" href="http://www.google.es" role="button" onclick="trampa();">Ir a Google</a>
-                    
+
                     <br/>
                     <br/>
 
@@ -40,17 +43,127 @@
                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Dropdown button
                            </button>
-                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <div class="dropdown-menu" id="dnn" aria-labelledby="dropdownMenuButton">
                                <h6 class="dropdown-header">Subdivisión</h6>
                                <a class="dropdown-item" href="#">Action</a>
                                <a class="dropdown-item" href="#">Another action</a>
-                               <div class="dropdown-divider"></div> <!--Linea separadora menú -->
+                               <div class="dropdown-divider"></div>
+                               <!--Linea separadora menú -->
                                <h6 class="dropdown-header">Subdivisión 2</h6>
                                <a class="dropdown-item" href="#">Something else here</a>
                            </div>
-</div>
+                       </div>
+                        <br/>
+                        <br/>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="btnLeft" class="btn btn-secondary" onclick="activar('L');">Left</button>
+                            <button type="button" id="btnMiddle" class="btn btn-secondary" onclick="activar('M');" >Middle</button>
+                            <button type="button" id="btnRight" class="btn btn-secondary" onclick="activar('R');">Right</button>
+                        </div>
+                     <br />
+                     <br />
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-secondary">1</button>
+                                <button type="button" class="btn btn-secondary">2</button>
+                                <button type="button" class="btn btn-secondary">3</button>
+                                <button type="button" class="btn btn-secondary">4</button>
+                            </div>
+                            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                                <button type="button" class="btn btn-secondary">5</button>
+                                <button type="button" class="btn btn-secondary">6</button>
+                                <button type="button" class="btn btn-secondary">7</button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Third group">
+                                <button type="button" class="btn btn-secondary">8</button>
+                            </div>
+                        </div>
+                    <br />
+                    <br />
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
+                    <h2>Formularios</h2>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3">
+                            <label for="inputUser" class="sr-only">User</label>
+                            <input type="password" class="form-control" id="inputUser" placeholder="User">
+                        </div>
+                        <div class="form-group mx-sm-3">
+                            <label for="inputPass" class="sr-only">Password</label>
+                            <input type="password" class="form-control" id="inputPass" placeholder="Pass">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </form>
+                    <br/>
+                    <br/>
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="offset-sm-2 form-group row">
+                            <div class="col-sm-2 sr-only">Checkbox</div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox"> Check me out
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-sm-2">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                    <br/>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                        <span class="input-group-addon">
+                            <i class="fas fa-user-astronaut"></i>
+                        </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-text">
+                        <span class="input-group-addon">.00</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                        <span class="input-group-addon">
+                            <i class="fas fa-euro-sign"></i>
+                        </span>
+                        </div>
+                        <input type="text" class="form-control" onkeyup="this.value=Numeros(this.value)" >
+                        <div class="input-group-text">
+                        <span class="input-group-addon">.00</span>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -63,4 +176,3 @@
 
 	</body>
 </html>
-
